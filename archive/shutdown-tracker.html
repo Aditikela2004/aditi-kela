@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shutdown and slowdown tracker | Aditi Kela</title>
+<meta name="description" content="A planned shutdown touches eight production areas, dozens of owners and several functions. I built one workbook that holds every activity, shows what is late, and gives leadership a single front page.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://aditi-kela.vercel.app/archive/shutdown-tracker">
+<meta property="og:title" content="Shutdown and slowdown tracker | Aditi Kela">
+<meta property="og:description" content="A planned shutdown touches eight production areas, dozens of owners and several functions. I built one workbook that holds every activity, shows what is late, and gives leadership a single front page.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aditi-kela.vercel.app/archive/shutdown-tracker">
+<meta property="og:image" content="https://aditi-kela.vercel.app/img/aditi-kela.jpg">
+<meta name="theme-color" content="#F5F0E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2410C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EAK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('ak-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">Aditi Kela</a>
+    <nav aria-label="Primary">
+      <a href="/work">Work</a>
+      <a href="/experience">Experience</a>
+      <a href="/about">About</a>
+      <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="wrap"><p class="archive-note"><b>Archive.</b> Archived detail for the Grifols work. Examples use made-up numbers, not company data. <a href="/archive">Back to the archive</a></p>
+  <p class="crumb"><a href="/grifols">&larr; All operations projects</a></p>
+  <div class="case-head">
+    <div class="tag">Program tracking &middot; Excel</div>
+    <h1>Shutdown and slowdown tracker</h1>
+    <p class="tldr">A planned shutdown touches eight production areas, dozens of owners and several functions. I built one workbook that holds every activity, shows what is late, and gives leadership a single front page.</p>
+  </div>
+  <dl class="meta"><div><dt>Role</dt><dd>Built and maintained it as a project management intern</dd></div><div><dt>Built in</dt><dd>Excel, using formulas and conditional formatting only</dd></div><div><dt>Used by</dt><dd>Operations leadership</dd></div><div><dt>Skills shown</dt><dd>Program management, schedule and milestone tracking, risk and issue tracking, stakeholder coordination, KPI reporting, Excel</dd></div></dl>
+  <div class="cs"><h2>The problem</h2><p>Shutdown work moves through approvals, permits, cleaning, maintenance, validation and a conditional release before a line can restart. Status sat in area-level lists, and a weekly slide pulled it together by hand.</p><h2>What I built</h2><p>The front page shows overall status and progress by area and by building. A timeline tab tracks the early milestones that gate everything else, such as approvals and work permits. A monthly calendar shows only the ramp down and ramp up for each area, because the weekly slide used that format and people already read it. Each area then has its own tab with the activity list and its own day by day calendar, and a rollup tab gathers every activity in one place.</p><h2>How it works</h2><p>Every activity carries one of four statuses: Not Started, In Progress, Completed or Blocked. Formulas compare end dates with today and flag anything late, so delay detection needs no one to remember to do it. A period selector switches the calendar between week, month, quarter and year. Gantt views follow the dates in the sheet through conditional formatting, which means changing a date moves the bar.</p><h2>How I checked it</h2><p>I audited the workbook formula by formula. The pass that mattered found nine leftover rows in the rollup that a visual check had missed, and three activities whose status no longer matched the calendar date. I also unified fonts, colors and print margins so every tab looked like it came from the same hand.</p><h2>What it changed</h2><p>The team got one place to look instead of area lists and a slide. Blocked and late items showed up while there was still time to act on them, and preparing the weekly update took far less effort than assembling it manually.</p></div>
+  <figure class="viz" style="margin-left:0;margin-right:0"><h3>Percent complete by area (sample)</h3><div class="vbar"><span>Area A</span><span class="track"><span class="fill" style="width:100%"></span></span><b>92</b></div><div class="vbar"><span>Area B</span><span class="track"><span class="fill" style="width:88%"></span></span><b>81</b></div><div class="vbar"><span>Area C</span><span class="track"><span class="fill" style="width:80%"></span></span><b>74</b></div><div class="vbar"><span>Area D</span><span class="track"><span class="fill" style="width:72%"></span></span><b>66</b></div><div class="vbar"><span>Area E</span><span class="track"><span class="fill" style="width:63%"></span></span><b>58</b></div><div class="vbar"><span>Area F</span><span class="track"><span class="fill" style="width:51%"></span></span><b>47</b></div><div class="vbar"><span>Area G</span><span class="track"><span class="fill" style="width:38%"></span></span><b>35</b></div><div class="vbar"><span>Area H</span><span class="track"><span class="fill" style="width:24%"></span></span><b>22</b></div><p class="note">Illustration with made-up numbers. It shows the layout, not company data.</p></figure>
+  <div class="pager"><a class="next" href="/archive/prioritization-dashboard"><small>Next</small><span>Project prioritization dashboard &rarr;</span></a></div>
+</div>
+<div style="height:48px"></div>
+
+</main>
+
+<footer>
+<div class="wrap">
+  <div class="foot-links">
+    <a href="mailto:aditikela0@gmail.com">aditikela0@gmail.com</a>
+    <a href="https://www.linkedin.com/in/kelaaditi" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    <a href="/archive">Archive</a>
+  </div>
+  <div class="foot-meta">
+    <span>&copy; 2026 Aditi Kela &middot; Seattle, WA &middot; Updated October 2026</span>
+    <button type="button" class="toggle" id="theme-toggle" aria-pressed="false">Dark mode</button>
+  </div>
+</div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>

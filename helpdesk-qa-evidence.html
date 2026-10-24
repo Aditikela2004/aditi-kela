@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HelpDesk: QA evidence | Aditi Kela</title>
+<meta name="description" content="Test evidence, manual acceptance scripts, known gaps and release recommendation for the HelpDesk prototype.">
+<link rel="canonical" href="https://aditi-kela.vercel.app/helpdesk-qa-evidence">
+<meta property="og:title" content="HelpDesk: QA evidence | Aditi Kela">
+<meta property="og:description" content="Test evidence, manual acceptance scripts, known gaps and release recommendation for the HelpDesk prototype.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aditi-kela.vercel.app/helpdesk-qa-evidence">
+<meta property="og:image" content="https://aditi-kela.vercel.app/img/aditi-kela.jpg">
+<meta name="theme-color" content="#F5F0E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2410C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EAK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('ak-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">Aditi Kela</a>
+    <nav aria-label="Primary">
+      <a href="/work" aria-current="page">Work</a>
+      <a href="/experience">Experience</a>
+      <a href="/about">About</a>
+      <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap"><p class="crumb"><a href="/helpdesk">&larr; HelpDesk</a></p>
+<section style="padding-top:12px"><h1 class="page-title">HelpDesk: QA evidence</h1>
+<p class="lead">Fictional company, sample data. This is the test evidence that accompanies the HelpDesk prototype, with its known gaps listed.</p>
+<div class="docbody cs" style="max-width:900px">
+<p>Results below come from commands run against the final source. Raw output is in the linked files.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Check set</th>
+<th>Result</th>
+<th>Raw output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit tests (node:test)</td>
+<td>26 passed, 0 failed</td>
+<td>Unit_Test_Results.txt</td>
+</tr>
+<tr>
+<td>Static checks</td>
+<td>14 passed, 0 failed</td>
+<td>Static_Checks.txt</td>
+</tr>
+<tr>
+<td>Browser checks (Chromium via Playwright)</td>
+<td>23 passed, 0 failed</td>
+<td>Browser_Check_Results.txt</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Traceability</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Req</th>
+<th>Requirement</th>
+<th>Tests</th>
+<th>Disposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td>Structured submission</td>
+<td>U03, U04, U05, U19; B03</td>
+<td>Verified (automated)</td>
+</tr>
+<tr>
+<td>R02</td>
+<td>Routing</td>
+<td>U01, U02, U18; B02</td>
+<td>Verified (automated)</td>
+</tr>
+<tr>
+<td>R03</td>
+<td>Ownership and lifecycle</td>
+<td>U06, U07, U08, U09, U20; B04, B05</td>
+<td>Verified (automated)</td>
+</tr>
+<tr>
+<td>R04</td>
+<td>History and timestamps</td>
+<td>U07, U09, U10, U22; B04, B05, B06</td>
+<td>Verified (automated)</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>Search and filtering</td>
+<td>U13, U14; B07, B08</td>
+<td>Verified (automated)</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Metrics</td>
+<td>U11, U12, U21, U23; B01, B09</td>
+<td>Verified (automated)</td>
+</tr>
+<tr>
+<td>R07</td>
+<td>Local persistence</td>
+<td>U16, U17; B02, B11, B14, B15</td>
+<td>Verified (automated); real quota exhaustion not tested</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Export</td>
+<td>U15; B10</td>
+<td>Verified (automated)</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>Interface</td>
+<td>B03, B12, B13, B19, B20; manual M08, M09</td>
+<td>Partly verified: automated checks only, no conformance audit, Chromium only</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>Delivery evidence</td>
+<td>S01 to S10 static checks; B17</td>
+<td>Verified (static checks and file review)</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Manual acceptance scripts</h2>
+<p>Not executed by a human tester. Status: pending.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Steps</th>
+<th>Expected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M01</td>
+<td>Submit a valid request</td>
+<td>Open New request, fill every field with valid values, submit.</td>
+<td>New request appears in Requests as Open and Unassigned; toast confirms.</td>
+</tr>
+<tr>
+<td>M02</td>
+<td>Submit an invalid request</td>
+<td>Leave title blank, enter a 4-character title, enter a 9-character description.</td>
+<td>Each field shows its message; no request is created.</td>
+</tr>
+<tr>
+<td>M03</td>
+<td>Assign and progress</td>
+<td>Open an unassigned request, try In progress, then assign an owner and retry.</td>
+<td>Error first, then success; history shows both changes.</td>
+</tr>
+<tr>
+<td>M04</td>
+<td>Resolve and reopen</td>
+<td>Resolve a request, then reopen it.</td>
+<td>Resolved time appears, then clears; history says Reopened.</td>
+</tr>
+<tr>
+<td>M05</td>
+<td>Filter and search</td>
+<td>Search an owner name, then add department and status filters.</td>
+<td>Results narrow; count updates; Clear filters restores all.</td>
+</tr>
+<tr>
+<td>M06</td>
+<td>Export</td>
+<td>Click Export CSV and open the file in a spreadsheet.</td>
+<td>All records present; a title beginning with = appears as text.</td>
+</tr>
+<tr>
+<td>M07</td>
+<td>Reset</td>
+<td>Click Reset demo data, cancel, then repeat and confirm.</td>
+<td>Cancel keeps data; confirm restores the 12 records.</td>
+</tr>
+<tr>
+<td>M08</td>
+<td>Keyboard only</td>
+<td>Complete M01 and M03 using the keyboard alone.</td>
+<td>Every control reachable; focus visible; Escape closes dialogs.</td>
+</tr>
+<tr>
+<td>M09</td>
+<td>Phone width</td>
+<td>Repeat M01 and M05 at about 375 px wide.</td>
+<td>No clipped controls; tables scroll inside their box.</td>
+</tr>
+<tr>
+<td>M10</td>
+<td>Storage warning</td>
+<td>Open the site in a private window that blocks storage.</td>
+<td>A warning explains that nothing will be saved; CSV export is offered.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Known gaps</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Gap</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G1</td>
+<td>Manual acceptance scripts M01 to M10 have not been executed by a human tester. The browser checks cover similar ground automatically.</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>G2</td>
+<td>Accessibility conformance has not been tested with a screen reader or audit. Only automated checks ran.</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>G3</td>
+<td>Browser coverage is Chromium only. Firefox and Safari were not tested.</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>G4</td>
+<td>Storage-full behavior was tested by simulating blocked storage, not by exhausting the real quota.</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>G5</td>
+<td>Two tabs open at once overwrite each other. Not handled.</td>
+<td>Open (accepted)</td>
+</tr>
+<tr>
+<td>G6</td>
+<td>History and records can be edited in browser developer tools. There is no tamper-proof audit trail.</td>
+<td>Open (accepted)</td>
+</tr>
+<tr>
+<td>G7</td>
+<td>Average resolution time uses elapsed clock time, not working hours.</td>
+<td>Open (by design)</td>
+</tr>
+<tr>
+<td>G8</td>
+<td>The usability study is proposed, not run. No user research exists.</td>
+<td>Open</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Intended-use assessment</h2>
+<p>Fit for a private concept demonstration with synthetic data. Not fit for real, personal or confidential data. No accessibility conformance, privacy review or load testing was done.</p>
+<h2>Release recommendation</h2>
+<p>Release as a private concept demonstration only.</p></div></section></div>
+</main>
+
+<footer>
+<div class="wrap">
+  <div class="foot-links">
+    <a href="mailto:aditikela0@gmail.com">aditikela0@gmail.com</a>
+    <a href="https://www.linkedin.com/in/kelaaditi" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    <a href="/archive">Archive</a>
+  </div>
+  <div class="foot-meta">
+    <span>&copy; 2026 Aditi Kela &middot; Seattle, WA &middot; Updated October 2026</span>
+    <button type="button" class="toggle" id="theme-toggle" aria-pressed="false">Dark mode</button>
+  </div>
+</div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>

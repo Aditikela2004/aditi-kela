@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aditi-kela.vercel.app/sitemap.xml

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safe-by-design onboarding redesign | Aditi Kela</title>
+<meta name="description" content="A clickable sign-up flow for a made-up app where protections are set by age, locked settings explain themselves, and Block and Report are shown during setup. It comes with the rules behind it and a kit for testing it.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://aditi-kela.vercel.app/archive/safe-onboarding-redesign">
+<meta property="og:title" content="Safe-by-design onboarding redesign | Aditi Kela">
+<meta property="og:description" content="A clickable sign-up flow for a made-up app where protections are set by age, locked settings explain themselves, and Block and Report are shown during setup. It comes with the rules behind it and a kit for testing it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aditi-kela.vercel.app/archive/safe-onboarding-redesign">
+<meta property="og:image" content="https://aditi-kela.vercel.app/img/aditi-kela.jpg">
+<meta name="theme-color" content="#F5F0E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2410C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EAK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('ak-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">Aditi Kela</a>
+    <nav aria-label="Primary">
+      <a href="/work">Work</a>
+      <a href="/experience">Experience</a>
+      <a href="/about">About</a>
+      <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="wrap"><p class="archive-note"><b>Archive.</b> Concept prototype with synthetic data. It has not been tested with real users. <a href="/archive">Back to the archive</a></p>
+  <p class="crumb"><a href="/archive/concept-projects">&larr; All concept projects</a></p>
+  <div class="case-head">
+    <div class="tag">UI/UX design · Trust and safety</div>
+    <h1>Safe-by-design onboarding redesign</h1>
+    <p class="tldr">A clickable sign-up flow for a made-up app where protections are set by age, locked settings explain themselves, and Block and Report are shown during setup. It comes with the rules behind it and a kit for testing it.</p>
+    <div class="cta" style="margin-top:20px"><a class="btn primary" href="https://safe-onboarding-redesign.vercel.app" target="_blank" rel="noopener">Open the live demo</a><a class="btn" href="https://github.com/Aditikela2004/safe-onboarding-redesign" target="_blank" rel="noopener">View the code on GitHub</a></div>
+  </div>
+  <dl class="meta"><div><dt>Type</dt><dd>Concept project. Synthetic data only, no real company or personal data.</dd></div><div><dt>My role</dt><dd>UX design, rules and build</dd></div><div><dt>Built with</dt><dd>Next.js, TypeScript. 28 unit tests.</dd></div><div><dt>Role families</dt><dd>UI/UX designer, product designer, associate product manager</dd></div><div><dt>Skills shown</dt><dd>UX flows, interaction design, safety and trust design, accessibility basics, usability test planning, prototyping, testing, deployment</dd></div></dl>
+  <div class="stats three" style="margin:0 0 24px"><div class="stat"><b>4</b><span>age groups, each with its own path and defaults</span></div><div class="stat"><b>7</b><span>settings, each showing who decides: fixed, parent or you</span></div><div class="stat"><b>28</b><span>unit tests, including that younger groups are never less protected</span></div></div>
+  <div class="cs">
+  <h2>Why I built it</h2><p>I chose a UI/UX project for this set because design decisions here carry real stakes: what a young person sees first decides what is protecting them. The app, Kitewing, is fictional, and the age rules are my own design choices, not legal advice.</p>
+  <h2>The problem</h2><p>Sign-up flows for young people tend to ask too little and leave everything open, or lock everything without saying why. Both leave people unsure what is protecting them.</p>
+  <h2>What I built</h2><ul><li>A prototype with a path for each age group, including simulated parent steps for under 13 that send nothing and collect no contact details.</li><li>A username step with generated suggestions and plain-words hints.</li><li>A settings screen where each setting says who decides and locked settings give a reason.</li><li>A Block and Report demo at the end of setup.</li><li>A rules-by-age table generated from the same code as the prototype.</li><li>A usability test kit with a facilitator script, five tasks, a session recorder and CSV export. It starts empty.</li></ul>
+  <h2>Decisions and tradeoffs</h2><ul><li><b>Defaults come from age, not a quiz.</b> One neutral question, month and year. If the date is unclear it uses the younger group, and after an under-13 result the year cannot be retyped.</li><li><b>Who decides is visible.</b> Every setting says Set for your age, Parent decides or Your choice.</li><li><b>Locked settings explain themselves.</b> No bare Not available.</li><li><b>Opening up is allowed where appropriate, with a plain warning</b> instead of a block.</li><li><b>Block and Report are shown while the person is calm</b>, at the end of setup.</li></ul>
+  <h2>What I tested</h2><ul><li>Twenty-eight unit tests: age boundaries, parent flow, rule consistency across groups, username rules and the test-kit summary.</li><li>A production build and a headless-browser click-through of the under-13 and teen paths, all three tabs, dark mode and a phone-width view.</li></ul>
+  <h2>What I have not tested yet</h2><ul><li>No usability sessions yet. The test kit is built, and its results table stays empty until real sessions are entered.</li><li>No legal review of the rules. Stricter defaults may frustrate older teens, and the test kit is designed to look for that.</li></ul>
+  <h2>What I would do next</h2><ul><li>Run five or so sessions with adults, or with guardian consent, and revise the weakest task.</li><li>Review the rules with a policy or legal specialist.</li><li>Test the parent steps with real parents.</li></ul>
+  </div>
+  <div class="pager"><a class="prev" href="/archive/shipment-disruption-navigator"><small>Previous</small><span>&larr; Shipment disruption navigator</span></a><a class="next" href="/archive/concept-projects"><small>Back to</small><span>All concept projects &rarr;</span></a></div>
+</div>
+<div style="height:48px"></div>
+
+</main>
+
+<footer>
+<div class="wrap">
+  <div class="foot-links">
+    <a href="mailto:aditikela0@gmail.com">aditikela0@gmail.com</a>
+    <a href="https://www.linkedin.com/in/kelaaditi" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    <a href="/archive">Archive</a>
+  </div>
+  <div class="foot-meta">
+    <span>&copy; 2026 Aditi Kela &middot; Seattle, WA &middot; Updated October 2026</span>
+    <button type="button" class="toggle" id="theme-toggle" aria-pressed="false">Dark mode</button>
+  </div>
+</div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>

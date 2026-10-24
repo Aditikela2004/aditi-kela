@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HelpDesk: service request prototype | Aditi Kela</title>
+<meta name="description" content="HelpDesk is a live prototype of a service request tool for a fictional company, using sample data. Workflow, requirements, delivery plan and testing.">
+<link rel="canonical" href="https://aditi-kela.vercel.app/helpdesk">
+<meta property="og:title" content="HelpDesk: service request prototype | Aditi Kela">
+<meta property="og:description" content="HelpDesk is a live prototype of a service request tool for a fictional company, using sample data. Workflow, requirements, delivery plan and testing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aditi-kela.vercel.app/helpdesk">
+<meta property="og:image" content="https://aditi-kela.vercel.app/img/helpdesk-overview.jpg">
+<meta name="theme-color" content="#F5F0E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2410C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EAK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('ak-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">Aditi Kela</a>
+    <nav aria-label="Primary">
+      <a href="/work" aria-current="page">Work</a>
+      <a href="/experience">Experience</a>
+      <a href="/about">About</a>
+      <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+<p class="crumb"><a href="/work">&larr; Work</a></p><div class="case-head"><div class="tagline"><span class="kind">Application project</span><span class="status live">Live prototype, sample data</span></div><h1>HelpDesk</h1><p class="tldr">A service request prototype for a fictional 75-person company. Users submit a request, it goes to the responsible team, and its status stays visible. It uses sample data and has no real users.</p></div>
+<dl class="meta"><div><dt>My role</dt><dd>I defined the workflow, requirements and delivery plan, and tested the request process with sample data.</dd></div><div><dt>Context</dt><dd>Independent project, built with AI assistance. Fictional company and sample data only.</dd></div><div><dt>Status</dt><dd>Deployed live prototype. Not a production system.</dd></div><div><dt>Planned in</dt><dd>Notion, Jira, Confluence and monday.com</dd></div></dl>
+<div class="actions-row" style="margin-top:-8px;margin-bottom:24px">
+  <a class="btn primary" href="https://helpdesk001.vercel.app" target="_blank" rel="noopener">Open the live prototype</a>
+  <a class="btn" href="https://github.com/Aditikela2004/HelpDesk" target="_blank" rel="noopener">View the code on GitHub</a>
+</div>
+<div class="cs">
+<h2>Problem and user</h2>
+<p>Employees at the fictional company ask IT, Facilities and HR for help by email and chat. Requests arrive incomplete, nobody knows who owns them, people chase for updates, and department heads cannot see workload. The users are employees who want to ask once and know what happens next, and department owners who need to see what is waiting and who has it.</p>
+
+<h2>Key decisions</h2>
+<ul>
+<li><b>Hold version 1 to the core flow.</b> Sign-in, a shared database, notifications, file uploads and SLA rules were left out. That kept the first release small enough to test request creation and ownership properly.</li>
+<li><b>Require an owner before work starts.</b> A request cannot move to In progress without an owner, so work never starts unassigned.</li>
+<li><b>Define the metrics on the page.</b> The resolved share is a count of the current list. It is not SLA compliance, and the page says so.</li>
+</ul>
+
+<h2>What the prototype does</h2>
+<ul>
+<li>A validated request form, so requests arrive complete.</li>
+<li>Routing by department, with an owner chosen from that department's team, or an Unassigned state.</li>
+<li>Three statuses and a dated history of every owner and status change.</li>
+<li>An overview, request list and analytics view that read from one set of records, with search, filters and CSV export.</li>
+</ul>
+<div class="shots cols2" style="margin:20px 0 8px">
+<figure class="shot wide"><img src="/img/helpdesk-overview.jpg" alt="HelpDesk overview page with request totals, a high-priority notice and department workload" loading="lazy"><figcaption>Overview: totals and workload by department (sample data)</figcaption></figure>
+<figure class="shot"><img src="/img/helpdesk-form.jpg" alt="New request form with title, requester, department, priority, category and description" loading="lazy"><figcaption>New request: each field is validated before saving</figcaption></figure>
+<figure class="shot"><img src="/img/helpdesk-detail.jpg" alt="Request detail with owner and status controls and a dated history" loading="lazy"><figcaption>Request detail: owner, status and dated history</figcaption></figure>
+</div>
+
+<h2>Evidence and results</h2>
+<ul>
+<li>Automated unit, static and browser checks cover each of the ten written requirements. The browser checks include the form, keyboard use and focus, a phone-width screen and a storage failure.</li>
+<li>The analytics view uses simulated events. It shows that tracking is in place, not how people behave.</li>
+</ul>
+
+<h2>Limitations and next step</h2>
+<ul>
+<li>No real users have used it, so there is no claim about time saved or adoption.</li>
+<li>Records live in the browser. Owners and filters are labels, not permissions, and there is no sign-in, shared storage or notifications.</li>
+<li>The ten manual acceptance scripts have not been run by a person. Accessibility conformance and browsers other than Chromium have not been tested.</li>
+<li>Next step: run the written usability study with employees from one department and fix what they trip on.</li>
+</ul>
+</div>
+<div class="artifacts"><h2>Artifacts</h2><ul>
+<li><a href="/helpdesk-requirements-traceability.csv" download>Requirements traceability (CSV)</a>: each requirement linked to its backlog items, tests and release decision.</li>
+<li><a href="/helpdesk-qa-evidence">QA evidence and known gaps</a>: what was tested, what was not, and the release recommendation.</li>
+</ul></div>
+<div class="pager"><a class="prev" href="/work"><small>Back to</small><span>&larr; All work</span></a><a class="next" href="/babysteps"><small>Next</small><span>BabySteps &rarr;</span></a></div>
+</div><div style="height:32px"></div>
+</main>
+
+<footer>
+<div class="wrap">
+  <div class="foot-links">
+    <a href="mailto:aditikela0@gmail.com">aditikela0@gmail.com</a>
+    <a href="https://www.linkedin.com/in/kelaaditi" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    <a href="/archive">Archive</a>
+  </div>
+  <div class="foot-meta">
+    <span>&copy; 2026 Aditi Kela &middot; Seattle, WA &middot; Updated October 2026</span>
+    <button type="button" class="toggle" id="theme-toggle" aria-pressed="false">Dark mode</button>
+  </div>
+</div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>

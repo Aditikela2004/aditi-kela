@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scope statement | TravelScout | Aditi Kela</title>
+<meta name="description" content="TravelScout scope statement: The edge of TravelScout&#x27;s first release, and what stays out.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://aditi-kela.vercel.app/archive/travelscout-scope">
+<meta property="og:title" content="Scope statement | TravelScout | Aditi Kela">
+<meta property="og:description" content="TravelScout scope statement: The edge of TravelScout&#x27;s first release, and what stays out.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aditi-kela.vercel.app/archive/travelscout-scope">
+<meta property="og:image" content="https://aditi-kela.vercel.app/img/aditi-kela.jpg">
+<meta name="theme-color" content="#F5F0E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2410C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EAK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('ak-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">Aditi Kela</a>
+    <nav aria-label="Primary">
+      <a href="/work">Work</a>
+      <a href="/experience">Experience</a>
+      <a href="/about">About</a>
+      <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)">Resume</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="wrap doc">
+  <p class="crumb"><a href="/archive/travelscout-docs">&larr; TravelScout documents</a></p>
+  <div class="case-head">
+    <div class="tag">TravelScout &middot; Project document</div>
+    <h1>Scope statement</h1>
+    <p class="tldr">The edge of TravelScout's first release, and what stays out.</p>
+  </div>
+  <dl class="meta"><div><dt>Project</dt><dd>TravelScout</dd></div><div><dt>Prepared by</dt><dd>Aditi Kela, product lead</dd></div><div><dt>Version</dt><dd>1.0, draft for review</dd></div><div><dt>Date</dt><dd>October 15, 2026</dd></div></dl>
+  <p class="legend" aria-label="How to read the labels"><span><span class="badge b-c">Confirmed</span> from the built app or my own records</span> <span><span class="badge b-e">Estimate</span> my working figure</span> <span><span class="badge b-p">Proposed</span> a plan or target to test</span> <span><span class="badge b-s">Sourced</span> from a cited public page</span> <span><span class="badge b-o">To confirm</span> open item to confirm</span></p>
+  <div class="docbody">
+<h2>Scope in one paragraph</h2>
+<p>One room per trip. Travelers join with a code, set their preferences and plan together in one chat with an AI travel guide. Tabs hold the plan, polls, itinerary and expenses so decisions stay near the conversation. <span class="badge b-c">Confirmed</span></p>
+<h2>Requirements</h2>
+<div class="tbl" tabindex="0" role="region" aria-label="Table"><table><thead><tr><th scope="col">ID</th><th scope="col">Requirement</th><th scope="col">Priority</th><th scope="col">Status</th><th scope="col">Basis</th></tr></thead><tbody><tr><td>R1</td><td>Start a trip with destination, dates, travelers and budget</td><td>Must</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R2</td><td>Others join with a trip code</td><td>Must</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R3</td><td>Personal preferences: budget, interests, pace, dietary and accessibility needs</td><td>Must</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R4</td><td>Group chat</td><td>Must</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R5</td><td>AI guide asks questions, then proposes flights and stays with estimates</td><td>Must</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R6</td><td>Each price shows the checked date and a source link, and a reminder to verify</td><td>Must</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R7</td><td>Day-by-day itinerary</td><td>Must</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R8</td><td>Polls</td><td>Should</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R9</td><td>Weather</td><td>Should</td><td>Built</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R10</td><td>Expenses tab</td><td>Should</td><td>Built (depth <span class="badge b-o">To confirm</span>)</td><td><span class="badge b-c">Confirmed</span></td></tr><tr><td>R11</td><td>Rename app title from TripMate AI to TravelScout</td><td>Must</td><td>Open</td><td><span class="badge b-o">To confirm</span></td></tr><tr><td>R12</td><td>Remove stray "0" and "00" displays between chat messages</td><td>Must</td><td>Open</td><td><span class="badge b-o">To confirm</span></td></tr><tr><td>R13</td><td>Booking links out to partners</td><td>Could</td><td>Not started</td><td><span class="badge b-p">Proposed</span></td></tr><tr><td>R14</td><td>Import reservations from email</td><td>Could</td><td>Not started</td><td><span class="badge b-p">Proposed</span></td></tr></tbody></table></div>
+<h2>Out of scope</h2>
+<ul><li>Booking and payment inside the app <span class="badge b-p">Proposed</span></li><li>Visa, insurance or medical advice <span class="badge b-p">Proposed</span></li><li>Native mobile apps <span class="badge b-p">Proposed</span></li><li>Loyalty points and rewards tracking <span class="badge b-p">Proposed</span></li><li>Guaranteeing any price <span class="badge b-c">Confirmed</span></li></ul>
+<h2>Acceptance criteria</h2>
+<div class="tbl" tabindex="0" role="region" aria-label="Table"><table><thead><tr><th scope="col">Area</th><th scope="col">Accepted when</th></tr></thead><tbody><tr><td>Join</td><td>A new traveler joins with the code and sets preferences in under 3 minutes</td></tr><tr><td>AI guide</td><td>The guide asks at least the destination, dates and budget before proposing options, and every option has a source link</td></tr><tr><td>Prices</td><td>Every price shows a date and is labeled as an estimate</td></tr><tr><td>Polls</td><td>A poll created by one traveler is visible to all and shows results</td></tr><tr><td>Itinerary</td><td>Chosen items appear on the correct day</td></tr></tbody></table></div>
+<h2>Constraints</h2>
+<ul><li>Solo builder, coursework origin. <span class="badge b-c">Confirmed</span></li><li>Price sources depend on what the data tools can reach. <span class="badge b-o">To confirm</span></li><li>Costs must stay small while users are few. <span class="badge b-e">Estimate</span></li></ul>
+<h2>Change control</h2>
+<ol class="plain"><li>Write the change and the reason.</li><li>Score with MoSCoW.</li><li>Add only Musts, or swap with an equal item.</li><li>Record the decision.</li></ol>
+  </div>
+  <div class="doc-actions cta">
+    <a class="btn primary" href="/archive/travelscout-scope.pdf" download>Download PDF</a>
+    <a class="btn" href="/archive/travelscout-docs">All TravelScout documents</a>
+  </div>
+  <div class="pager"><a class="prev" href="/archive/travelscout-charter"><small>Previous</small><span>&larr; Project charter</span></a><a class="next" href="/archive/travelscout-research"><small>Next document</small><span>User research plan and template &rarr;</span></a></div>
+</div>
+<div style="height:48px"></div>
+
+</main>
+
+<footer>
+<div class="wrap">
+  <div class="foot-links">
+    <a href="mailto:aditikela0@gmail.com">aditikela0@gmail.com</a>
+    <a href="https://www.linkedin.com/in/kelaaditi" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/Aditi_Kela_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    <a href="/archive">Archive</a>
+  </div>
+  <div class="foot-meta">
+    <span>&copy; 2026 Aditi Kela &middot; Seattle, WA &middot; Updated October 2026</span>
+    <button type="button" class="toggle" id="theme-toggle" aria-pressed="false">Dark mode</button>
+  </div>
+</div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>
