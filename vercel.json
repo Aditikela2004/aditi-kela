@@ -8,6 +8,11 @@
       "permanent": true
     },
     {
+      "source": "/about",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/portfolio.html",
       "destination": "/work",
       "permanent": true
